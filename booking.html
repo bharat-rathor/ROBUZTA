@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
@@ -32,6 +32,10 @@
         }
     </script>
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="shortcut icon" href="favicon.ico">
 </head>
 <body class="bg-dark text-slate-900 font-sans antialiased overflow-x-hidden selection:bg-primary selection:text-slate-900">
 
@@ -212,7 +216,7 @@
                             </div>
                             <div class="border-t border-slate-200 pt-4 flex justify-between items-center">
                                 <span class="text-slate-900/50">Estimated Cost</span>
-                                <span id="summaryCost" class="text-3xl font-bold text-primary font-heading">₹0.00</span>
+                                <span id="summaryCost" class="text-3xl font-bold text-primary font-heading">?0.00</span>
                             </div>
                         </div>
                         
@@ -387,7 +391,7 @@
                 if(issue.includes("Screen")) cost = 2999.00;
                 if(issue.includes("Motherboard")) cost = 5999.00;
                 if(issue.includes("Water")) cost = 3999.00;
-                document.getElementById('summaryCost').innerText = `₹${cost.toFixed(2)}`;
+                document.getElementById('summaryCost').innerText = `?${cost.toFixed(2)}`;
             }
         }
         
@@ -472,3 +476,4 @@
 <script src="js/auth.js"></script>
 </body>
 </html>
+

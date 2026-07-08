@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
@@ -30,6 +30,10 @@
         }
     </script>
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="shortcut icon" href="favicon.ico">
 </head>
 <body class="bg-card text-slate-900 font-sans antialiased overflow-x-hidden selection:bg-primary selection:text-slate-900">
 
@@ -226,16 +230,16 @@
                     document.getElementById('payIssue').innerText = bookingData.issue;
                     document.getElementById('payMode').innerText = bookingData.status === 'Doorstep Pickup' ? bookingData.status : 'Store Drop-off';
                     
-                    // Parse cost which is a string like "₹1499"
+                    // Parse cost which is a string like "?1499"
                     const baseCostStr = bookingData.cost.replace(/[^0-9.]/g, '');
                     const baseCost = parseFloat(baseCostStr) || 0;
                     
                     const tax = baseCost * 0.18;
                     const total = baseCost + tax;
                     
-                    document.getElementById('paySubtotal').innerText = '₹' + baseCost.toFixed(2);
-                    document.getElementById('payTax').innerText = '₹' + tax.toFixed(2);
-                    document.getElementById('payTotal').innerText = '₹' + total.toFixed(2);
+                    document.getElementById('paySubtotal').innerText = '?' + baseCost.toFixed(2);
+                    document.getElementById('payTax').innerText = '?' + tax.toFixed(2);
+                    document.getElementById('payTotal').innerText = '?' + total.toFixed(2);
                     
                     document.getElementById('payBtn').disabled = false;
                 } else {
@@ -294,3 +298,4 @@
     </script>
 </body>
 </html>
+
